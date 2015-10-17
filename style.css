@@ -1,0 +1,121 @@
+
+/* latin */
+@font-face {
+  font-family: 'Hind';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Hind Regular'), local('Hind-Regular'), url(./res/font.woff) format('woff');
+}
+
+body {
+	background-image: url( './res/bg.png' );
+	font-family: 'Hind';
+}
+
+body > div {
+	border: 3px solid rgb(  50,50,50 );
+	-webkit-border-radius: 10px;
+}
+
+div {
+	background-color: rgb(240, 240, 240);
+}
+
+.ListView {
+	border: 1px solid rgb( 73,73,73 );
+	padding: 0;
+	background-color: white;
+	cursor: default;
+	overflow: scroll;
+	list-style: none;
+}
+
+.ListItem {
+	padding: 2px;
+}
+
+.ListItem[item_selected='True'] {
+	background-color: rgb(215,215,215)
+}
+
+.ListItem:hover {
+	background: linear-gradient( rgb(230,230,230) , rgb( 215,215,215 ) );
+}
+
+input,button,textarea,select {
+	font-family: 'Hind';
+}
+
+button,th {
+	border: 1px solid rgb( 73,73,73 );
+	color: white;
+	background: linear-gradient( rgb(110,110,110) , rgb( 70,70,70 ) );
+	font-weight: normal;
+	cursor: default;
+}
+
+button {
+	-webkit-border-radius: 5px;
+}
+
+button:hover,th:hover {
+	background: linear-gradient( rgb(120,120,120) , rgb( 70,70,70 ) );
+}
+
+.spinboxWidget, .textareaWidget, table, select {
+	border: 1px solid rgb( 73,73,73 );
+}
+
+table {
+	border-spacing: 0;
+	overflow: scroll;
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid rgb(218,218,218);
+	background-color: white;
+}
+
+.Menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background: transparent; /*rgb(240, 240, 40);*/
+}
+
+.MenuItem {
+	border-bottom: 1px solid gray;
+}
+
+.MenuItem .MenuItem {
+	display: block;
+	position: relative;
+	float: left;
+	background: rgb(140, 140, 140);
+}
+
+/*The CSS to hide the sub menus.*/
+.MenuItem .Menu {
+	display: none;
+	/*height: 100%;*/
+}
+/*Displays the dropdown menu on hover.*/
+.MenuItem:hover > .Menu {
+	display: block;
+	position: absolute;
+}
+
+.MenuItem:hover{
+	background: rgb(180, 180, 180);
+}
+
+.MenuItem[onclick]:not([onclick=""]):hover{
+	color: white;
+	/*font-weight: bold;*/
+}
+
+.Menu .Menu .Menu {
+	left: 100%;
+	top: 0;
+}
